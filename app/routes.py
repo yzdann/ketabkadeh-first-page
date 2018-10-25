@@ -1,11 +1,12 @@
 # -*- coding: utf-8 -*-
 from flask import render_template, flash, redirect, url_for
-from app import app, db
+from app import app, db, limiter
 from app.forms import NotifyMeForm
 from app.models import User
 
 
 @app.route('/', methods=['GET', 'POST'])
+@limiter.limit("40 per day")
 def index():
     form = NotifyMeForm()
     if form.validate_on_submit():
