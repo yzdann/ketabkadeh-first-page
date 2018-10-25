@@ -91,3 +91,17 @@
 input {
   width: 100%
 }
+
+.misc-page-wrapper {
+  display: grid;
+  height: 100%;
+  grid-gap: 5px;
+  grid-template-columns: repeat(4, 2fr);
+  justify-items: center;
+  align-items: center;
+}
+
+.misc-page-main {
+  margin-top: 10rem;
+  grid-column: 2/-2;
+}

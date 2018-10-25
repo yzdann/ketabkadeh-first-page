@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>کتاب کده</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body dir="rtl">
+  <div class="misc-page-wrapper">
+    <div class="misc-page-main">
+      {% block content %}{% endblock %}
+    </div>
+  </div>
+</body>
+</html>
