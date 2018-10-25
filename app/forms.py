@@ -6,4 +6,3 @@ from wtforms.validators import DataRequired, Email
 
 class NotifyMeForm(FlaskForm):
     email = StringField(validators=[DataRequired(), Email()])
-    submit = submit = SubmitField('تایید')
