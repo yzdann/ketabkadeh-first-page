@@ -1,0 +1,44 @@
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+<html>
+
+<head>
+  <title>کتاب کده</title>
+</head>
+
+<body dir="rtl">
+  <div class="wrapper">
+    <div class="main-title">
+      <h1>کتاب کده</h1>
+    </div>
+    <div class="description">
+        <p>سلام دوست عزیز سایت هنوز بالا نیومده :(( ولی به زودی میاد میتونی ایمیلت رو توی فرم زیر
+          وارد کنی تا به محض
+          بالا آومدن سایت بهت خبر بدیم</p>
+    </div>
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+        {% for message in messages %}
+          <div class="message">
+            <p>{{ message }}</p>
+          </div>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <div class="submit-form">
+      <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+          <bdo dir="ltr">{{ form.email }}<br></bdo>
+        </p>
+          {% for error in form.email.errors %}
+          <div class="error">{{ error }}</div>
+          {% endfor %}
+          <div class="btn">
+            <button type="submit"> ثبت</button>
+          </div>
+      </form>
+    </div>
+  </div>
+</body>
+
+</html>
