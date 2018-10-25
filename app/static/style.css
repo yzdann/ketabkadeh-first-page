@@ -28,6 +28,7 @@
   grid-column: 2/-2;
 }
 
+
 .btn button {
   -moz-box-shadow: inset 0px 1px 0px 0px #ffffff;
   -webkit-box-shadow: inset 0px 1px 0px 0px #ffffff;
@@ -85,4 +86,8 @@
 .error {
   color: red;
   margin: 0.2rem 0.1rem 0.2rem 0;
+}
+
+input {
+  width: 100%
 }

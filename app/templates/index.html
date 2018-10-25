@@ -33,6 +33,9 @@
           {% for error in form.email.errors %}
           <div class="error">{{ error }}</div>
           {% endfor %}
+          <div class="recaptcha">
+            {{ form.recaptcha }}
+          </div>
           <div class="btn">
             <button type="submit"> ثبت</button>
           </div>
@@ -42,3 +45,7 @@
 </body>
 
 </html>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
+
