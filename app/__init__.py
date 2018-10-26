@@ -15,4 +15,4 @@ limiter = Limiter(
     default_limits=["200 per day", "50 per hour"]
 )
 
-from app import routes, models, errors
+from app import routes, models, filters

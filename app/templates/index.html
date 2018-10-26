@@ -43,7 +43,7 @@
           <div class="recaptcha">
             {{ form.recaptcha }}
             {% for error in form.recaptcha.errors %}
-              <div class="error">{{ error }}</div>
+              <div class="error">{{ error | captcha_error_translation }}</div>
             {% endfor %}
           </div>
           <div class="btn">
