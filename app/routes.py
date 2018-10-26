@@ -19,6 +19,5 @@ def index():
             user = User(email=form.email.data)
             db.session.add(user)
             db.session.commit()
-            flash('رواله :) خبرت می‌کنیم')
-            return redirect(url_for('index'))
+            return render_template('success.html')
     return render_template('index.html', form=form)
