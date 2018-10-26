@@ -11,7 +11,7 @@
 <body dir="rtl">
 
   <div id="overlay">
-    <img src="https://media.giphy.com/media/o5oLImoQgGsKY/200w_d.gif" alt="loading" />
+    <img src="https://media.giphy.com/media/o5oLImoQgGsKY/200w_d.gif" alt="...loading" />
   </div>
   <div class="wrapper">
     <div class="main-title">
@@ -42,6 +42,9 @@
           {% endfor %}
           <div class="recaptcha">
             {{ form.recaptcha }}
+            {% for error in form.recaptcha.errors %}
+              <div class="error">{{ error }}</div>
+            {% endfor %}
           </div>
           <div class="btn">
             <button type="submit"> ثبت</button>
