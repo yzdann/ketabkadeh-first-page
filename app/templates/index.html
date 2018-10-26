@@ -3,9 +3,16 @@
 
 <head>
   <title>کتاب کده</title>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.2/modernizr.js"></script>
+  <script src="{{ url_for('static', filename='main.js') }}"></script>
 </head>
 
 <body dir="rtl">
+
+  <div id="overlay">
+    <img src="https://media.giphy.com/media/o5oLImoQgGsKY/200w_d.gif" alt="loading" />
+  </div>
   <div class="wrapper">
     <div class="main-title">
       <h1>کتاب کده</h1>
@@ -45,7 +52,4 @@
 </body>
 
 </html>
-
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-<script type="text/javascript" src="{{ url_for('static', filename='main.js') }}"></script>
 

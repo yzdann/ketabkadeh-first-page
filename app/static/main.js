@@ -6,3 +6,9 @@ if (width < 302) {
 	$('.g-recaptcha').css('transform-origin', '10 10');
 	$('.g-recaptcha').css('-webkit-transform-origin', '10 10');
 }
+
+$(window).load(function() {
+    // Animate loader off screen
+    $("#overlay").fadeOut("slow");;
+});
+
