@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-from flask import render_template, flash, redirect, url_for
+from flask import render_template, flash
 from app import app, db, limiter
 from app.forms import NotifyMeForm
 from app.models import User
@@ -10,13 +10,13 @@ from app.models import User
 def index():
     form = NotifyMeForm()
     if form.validate_on_submit():
-        # check for duplicated email
-        user = User.query.filter_by(email=form.email.data).first()
+        user = User.query.filter(
+                User.telegram_id.ilike(form.telegram_id.data)
+        ).first()
         if user is not None:
-            flash('این ایمیلی که میزنی قبلاً ثبت شده که')
-        # create user
+            flash('این نام کاربری که میزنی قبلاً ثبت شده که')
         else:
-            user = User(email=form.email.data)
+            user = User(telegram_id=form.telegram_id.data)
             db.session.add(user)
             db.session.commit()
             return render_template('success.html')
